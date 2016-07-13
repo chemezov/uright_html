@@ -1,0 +1,30 @@
+{
+  "name": "ask_unit2_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^1.1.1",
+    "gulp": "3.*",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.1.0",
+    "minimist": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp-open": "^0.3.2",
+    "mkdirp": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

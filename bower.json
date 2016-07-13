@@ -1,0 +1,23 @@
+{
+  "name": "ask_unit2_html",
+  "directory": "build/",
+  "version": "0.0.0",
+  "authors": [
+    "Michael <michlenanosoft@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "=3.3.6",
+    "slick-carousel": "^1.6.0",
+    "fancybox": "^2.1.5"
+  },
+  "main": "index.html"
+}

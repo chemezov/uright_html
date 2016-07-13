@@ -1,0 +1,35 @@
+doctype html
+html
+    include ./includes/head.jade
+    body(data-spy="scroll", data-target="#navbar-example")
+        #top
+        include ./includes/header.jade
+
+        .b-feedback-mini
+            h2.b-feedback-mini__title Записаться на просмотр строящегося дома
+
+            .container
+                form.b-feedback-mini__form
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            .row
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Представьтесь:
+                                        input.form-control(type="text", placeholder="Представьтесь:")
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Телефон:
+                                        input.form-control(type="text", placeholder="Телефон:")
+                                .col-xs-4
+                                    button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
+
+        .b-gallery#gallery
+            h2.b-gallery__title фото со стройплощадки
+
+            .b-gallery__list
+                each val in [1, 2, 3, 4, 5, 6, 7, 8]
+                    .b-gallery__item
+                        img.b-gallery__image(src='assets/img/gallery/#{val}.jpg')
+
+include ./includes/footer.jade
