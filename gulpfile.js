@@ -180,10 +180,12 @@ gulp.task('jade-watch', ['templates'], reloadCb);
 // watch files for changes and reload
 gulp.task('watch', ['build'], function () {
 
-    browserSync.init({server: './build', open: false});
+    browserSync.init({server: './build', open: false}, function (err, server) {
+        var url = server.options.get('urls').get('local');
 
-    gulp.src('./build/*.html')
-        .pipe(open('http://localhost:3000/<%=file.path.replace(file.base,"")%>', {app: 'chrome'}));
+        gulp.src('./build/*.html')
+            .pipe(open(url + '/<%=file.path.replace(file.base,"")%>', {app: 'chrome'}));
+    });
 
     gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.json'], ['jade-watch']);
     //gulp.watch(['*.html']).on('change', reload);
