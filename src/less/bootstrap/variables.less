@@ -42,14 +42,15 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
+@font-family-primary:     'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+@font-family-base:        @font-family-primary;
 
 @font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-large:         ceil((@font-size-base * 1.25)) + 4px; // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
 @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
@@ -102,8 +103,8 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
+@border-radius-base:        8px;
+@border-radius-large:       8px;
 @border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -144,9 +145,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-color:              #ffffff;
+@btn-default-bg:                 transparent;
+@btn-default-border:             #ffffff;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -203,12 +204,12 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        #afafaf;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 26);
 //** Large `.form-control` height
-@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 15);
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
@@ -358,23 +359,23 @@
 
 // Basics of a navbar
 @navbar-height:                    50px;
-@navbar-margin-bottom:             @line-height-computed;
-@navbar-border-radius:             @border-radius-base;
+@navbar-margin-bottom:             0px;
+@navbar-border-radius:             0px;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
+@navbar-default-color:             #c8dafa;
+@navbar-default-bg:                #273a5d;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+@navbar-default-link-color:                #c8dafa;
+@navbar-default-link-hover-color:          #ffbe00;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
-@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-active-color:         #ffbe00;
+@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-disabled-color:       transparent;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
