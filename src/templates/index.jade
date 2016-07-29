@@ -265,6 +265,12 @@ html
                         zoom: 12
                     });
 
+                    // Создание экземпляра элемента управления
+                    myMap.controls.add(new ymaps.control.ZoomControl());
+                    myMap.controls.add(new ymaps.control.ScaleLine());
+                    //myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
+
+
                     // Создаем метку с изображением коалы
                     myPlacemark = new ymaps.Placemark([56.831385, 60.724580], {
                         // Контент балуна
